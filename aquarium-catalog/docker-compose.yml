@@ -1,9 +1,6 @@
 services:
   aquarium-catalog:
-    image: aquarium-catalog:${IMAGE_TAG:-0.1.0}
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: aqua/plants:v0.0.1
     ports:
       - "3000:3000"
     environment:
