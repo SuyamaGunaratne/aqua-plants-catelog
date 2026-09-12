@@ -78,16 +78,6 @@ export function Lightbox({
           exit={{ opacity: 0, scale: 0.96, y: 12 }}
           transition={{ type: "spring", stiffness: 320, damping: 28 }}
           onClick={(event) => event.stopPropagation()}
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={0.12}
-          onDragEnd={(_, info) => {
-            if (info.offset.x > 80) {
-              goPrevious();
-            } else if (info.offset.x < -80) {
-              goNext();
-            }
-          }}
         >
           <div className="flex items-center justify-between border-b border-border px-4 py-3 sm:px-6">
             <div className="min-w-0 pr-4">
@@ -109,7 +99,20 @@ export function Lightbox({
             </Button>
           </div>
 
-          <div className="relative aspect-[4/3] w-full bg-muted sm:aspect-[16/10]">
+          <motion.div
+            className="relative aspect-[4/3] w-full touch-pan-y bg-muted sm:aspect-[16/10]"
+            drag="x"
+            dragDirectionLock
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.16}
+            onDragEnd={(_, info) => {
+              if (info.offset.x > 80) {
+                goPrevious();
+              } else if (info.offset.x < -80) {
+                goNext();
+              }
+            }}
+          >
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={plant.id}
@@ -129,7 +132,7 @@ export function Lightbox({
                 />
               </motion.div>
             </AnimatePresence>
-          </div>
+          </motion.div>
 
           <div className="flex items-center justify-between gap-3 border-t border-border px-4 py-3 sm:px-6">
             <Button

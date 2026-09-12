@@ -1,4 +1,4 @@
-import { Camera, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -6,7 +6,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
         <div>
           <p className="font-heading text-base font-semibold text-foreground">
-            Company Name
+            IMAZO AB
           </p>
           <p className="mt-1 text-sm text-muted-foreground">
             Premium aquarium plants for every aquascape.
@@ -18,15 +18,22 @@ export function Footer() {
             href="#"
             className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
           >
-            <MessageCircle className="size-4" aria-hidden="true" />
-            WhatsApp (placeholder)
+            <Phone className="size-4" aria-hidden="true" />
+            Phone: +46-(0)512-270 700
           </a>
           <a
             href="#"
             className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
           >
-            <Camera className="size-4" aria-hidden="true" />
-            Instagram (placeholder)
+            <Mail className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+            Email: info@imazo.se
+          </a>
+          <a
+            href="#"
+            className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+          >
+            <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+            Address: Gradgatan 1 534 50 VARA
           </a>
         </div>
       </div>

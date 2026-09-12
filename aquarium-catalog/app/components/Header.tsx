@@ -19,11 +19,11 @@ export function Header({ searchQuery, onSearchChange }: HeaderProps) {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <div className="flex min-w-0 items-center gap-3">
           <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-            <Leaf className="size-5" aria-hidden="true" />
+            <img src= "\R.png" alt="logo"/>
           </div>
           <div className="min-w-0">
             <p className="truncate font-heading text-base font-bold tracking-tight text-foreground sm:text-lg">
-              Company Name
+              IMAZO AB
             </p>
             <p className="hidden truncate text-xs text-muted-foreground sm:block">
               Premium Aquarium Plants

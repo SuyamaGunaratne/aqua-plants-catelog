@@ -33,6 +33,7 @@ export function PlantGrid({ plants, gridKey, onPlantClick }: PlantGridProps) {
     <AnimatePresence mode="popLayout">
       <motion.div
         key={gridKey}
+        layout
         className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-5 lg:grid-cols-4 lg:gap-6"
       >
         {plants.map((plant, index) => (
